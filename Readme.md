@@ -45,3 +45,59 @@ O si no sabes que comando usar para crear el componente personalizado, coloca el
 ### Midudev:
 
 - [Tutorial Básico Angular](https://youtu.be/f7unUpshmpA?si=INCZedrtPI17jcMU)
+
+### SergieCode:
+
+- [Angular desde cero](https://www.youtube.com/watch?v=soInCF7nbDw)
+
+
+## ¿Qué son los módulos?
+Mecanismo de organización y de encapsulación de:
+- Componentes
+- Directivas
+- Pipes
+- Servicios
+Todo esto, con el objetivo de dividir la aplicaciones en partes agrupadas facilitando la mantenibilidad y escalabilidad.
+
+### ¿Cómo crear los módulos?
+```sh
+ng generate module <nombre-modulo>
+
+o
+
+ng g m <nombre-modulo>
+```
+
+## ¿Qué son los componentes?
+Bloque fundamental de la aplicación para UI, responsables de definir cómo se ve y cómo se comporta ese elemento en la pantalla del usuario. Cada componente representa un elemento visual o funcional de la página, por ejemplo: Un pie de página, un formulario, una lista de elementos,etc...
+
+### ¿Cómo crear los componentes?
+```sh
+ng generate component <nombre-componente>
+
+o
+
+ng g c <nombre-compoenente>
+```
+
+## Enlaces de datos (binding)
+capacidad de conectar y sincronizar los datos entre el modelo(typescript) y la vista(html)
+(ver diapositiva llamada: Angular Enviar información entre componentes.pptx)
+
+## ¿Qué son los Servicios?
+Clase de typescript que se utiliza para organizar y compartir lógica con los demás componentes 
+(muy parecido a useContext de react)
+### ¿Cómo generar un Servicio?
+```sh
+ng generate service <nombre-servicio>
+
+O
+
+ng g s <nombre-servicio>
+```
+
+## ¿Qué son dependencias?
+Recursos externos y modulos de código que una aplicación necesita para funcionar correctamente (incluyen:
+bibliotecas externas, módulos de Angular)se gestionan por medio de inyección de dependencias
+### ¿cómo aplicarlo?
+(se aplica por medio del constructor del componente se le agrega como parámetro(del servicio))
