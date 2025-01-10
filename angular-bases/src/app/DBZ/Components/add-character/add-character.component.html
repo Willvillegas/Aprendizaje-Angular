@@ -1,1 +1,17 @@
-<p>add-character works!</p>
+<section class="row border rounded m-md-2">
+
+    <h1>Agregar personaje</h1>
+    <form  (ngSubmit)="onSubmitCharacter()" >
+        <input class="form-control mb-2" 
+                type="text" 
+                placeholder="Nombre" 
+                name="name" 
+                [(ngModel)]="character.name">
+        <input class="form-control mb-2" 
+                type="number" 
+                placeholder="Poder" 
+                name="power" 
+                [(ngModel)]="character.power">
+        <input type="submit" class="btn btn-primary" value="Insertar" >
+    </form>
+</section>

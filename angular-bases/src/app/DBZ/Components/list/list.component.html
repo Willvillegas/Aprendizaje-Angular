@@ -1,6 +1,28 @@
 <h1>Lista</h1>
 <ul class="list-group">
     @for (item of this.characterList; track $index) {
-        <li class="list-group-item w-auto">{{ item.name }} - POWER {{item.power}}</li>
+    <li class="list-group-item w-auto"
+        [ngClass]=" { 'list-group-item-danger': item.power > 9000, 'list-group-item-success': item.power <= 9000 }">
+        
+        <div class="row justify-content-between align-items-center">
+            <div class="col">
+                <span class="text-primary" >{{ $index +1 }}. </span>
+                <span>{{item.name}}</span>
+                <strong> - Power:</strong>
+                <span>{{item.power}}</span>
+                
+            </div>
+            <div class="col ">
+                <button class="btn btn-danger mx-1"
+                (click)="onUpdateCharacterPower(item.id,-1)"> - </button>
+                <button class="btn btn-success mx-1"
+                (click)="onUpdateCharacterPower(item.id,+1)"> + </button>
+                <button class="btn btn-danger mx-1"
+                (click)="onDeleteCharacter(item.id)"> X </button>
+            </div>
+        </div>
+    </li>
     }
+
+
 </ul>
