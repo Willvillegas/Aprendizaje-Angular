@@ -1,0 +1,12 @@
+<aside class="bg-dark border-right p-3" id="idSideBar" style="height: 100%;">
+    <h1 class="text-light">Gifs APP</h1>
+    <hr class="text-white">
+    <ul class="list-group ">
+        @for (item of tags; track $index) {
+        <button class="list-group-item" (click)="searchTag(item)">
+            {{item}}
+        </button>
+        }
+    </ul>
+
+</aside>

@@ -1,0 +1,15 @@
+<section class="row my-3">
+    @for (item of gifs; track $index) {
+        <div class="col-md-3 col-sm-6 col-12">
+            <!-- {{item.images.downsized_medium.url}}
+            -
+            {{item.title}} -->
+            <cmp-gifs-card
+                [url]="item.images.downsized_medium.url"
+                [title]="item.title"
+            >
+
+            </cmp-gifs-card>
+        </div>
+    }
+</section>
