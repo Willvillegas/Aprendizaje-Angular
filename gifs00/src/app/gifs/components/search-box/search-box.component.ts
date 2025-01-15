@@ -17,7 +17,7 @@ export class SearchBoxComponent {
   constructor(private gifService :GifsService){}
 
   /**
-   * searchTag
+   * searchTag: usa el servicio de gifs para buscar los gifs acorde a lo que el usuario escriba en el input
    */
   public searchTag() :void {
     const newTag = this.tagInput.nativeElement.value;

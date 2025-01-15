@@ -1,0 +1,15 @@
+<article class="card mb-2 text-center bg-dark text-light">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="url"
+            [alt]="title"
+            class="img-fluid rounded-start"
+            >
+        </div>
+        <div class="col-md-8 overflow-auto">
+            <div class="card-body">
+                <p class="card-text ">{{ title  || 'NULL'}}</p>
+            </div>
+        </div>
+    </div>
+</article>

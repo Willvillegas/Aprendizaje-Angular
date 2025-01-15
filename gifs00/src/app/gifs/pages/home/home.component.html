@@ -1,9 +1,27 @@
 <div class="row p-3" >
-    <section class="col-12 " >
-        <cmp-gifs-search-box></cmp-gifs-search-box>
-    </section>
-    <section class="col-12">
-        <cmp-gifs-card-list [gifs]="gifs"></cmp-gifs-card-list>
-    </section>
+    <div class="col-lg-8 col-sm-12">
+        <section class="row " >
+            <cmp-gifs-search-box></cmp-gifs-search-box>
+        </section>
+        <section class="row">
+            <cmp-gifs-card-list [gifs]="gifs"></cmp-gifs-card-list>
+        </section>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+        <section class="row">
+            <cmp-card-list-trending 
+            (callParent)="onCallNextTrending()" 
+            [listItem]="gifsTrending"
+            [mainTitle]="setTitle('Trending')"
+            ></cmp-card-list-trending>
+        </section>
+        <section class="row">
+            <cmp-card-list-trending 
+            (callParent)="onCallNextRandom()" 
+            [listItem]="gifsRandom"
+            [mainTitle]="setTitle('Random')"
+            ></cmp-card-list-trending>
+        </section>
+    </div>
 
 </div>

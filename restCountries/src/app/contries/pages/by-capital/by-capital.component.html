@@ -1,0 +1,15 @@
+<section>
+    <h2>Por Capital</h2>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <shr-search-box
+            [placeholder]="'Buscar por Capital'"
+            (onValue)="searchCapital($event)"
+            ></shr-search-box>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <cmp-contries-table [countries]="countries"></cmp-contries-table>
+    </div>
+</section>

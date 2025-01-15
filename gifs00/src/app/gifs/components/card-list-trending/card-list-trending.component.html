@@ -1,0 +1,16 @@
+<section class="col my-3 text-center">
+    <div class="row">
+        <h2 class="">{{this.mainTitle}}</h2>
+        <button (click)="next()" class="btn btn-primary">Next</button>
+    </div>
+        @for (item of this.listItem; track $index) {
+            <div class="col-12 my-3">
+                <cmp-gifs-card-trending
+                    [url]="item.images.downsized_medium.url"
+                    [title]="item.title"
+                >
+                </cmp-gifs-card-trending>
+            </div>
+        }
+    
+</section>
