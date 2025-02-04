@@ -1,0 +1,8 @@
+<section>
+    <h1 class="text-2xl">Heroes</h1>
+    <div class="flex flex-row flex-wrap">
+        @for (item of this.listHeroes; track $index) {
+        <cmp-hero-card class="p-4 m-4" [heroe]="item"></cmp-hero-card>
+        }
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<section class="flex flex-column p-2">
+    <h3>Buscador</h3>
+    <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input 
+            matInput 
+            type="text"  
+            [formControl]="searchInput"
+            (input)="this.searchHeroe()"
+            [matAutocomplete]="auto"
+        >
+        <mat-autocomplete 
+            autoActiveFirstOption
+            #auto="matAutocomplete"
+            (optionSelected)="this.onSelectedOption($event)"
+            
+        >
+        @for (item of this.heroes; track $index) {
+            <mat-option [value]="item">
+                {{item.superhero}}
+            </mat-option>
+        }
+        @if (this.heroes.length === 0 && this.searchInput.value &&
+            this.searchInput.value.trim().length > 0) {
+            <mat-option [value]="">
+                {{'Not found hero: ' + this.searchInput.value}}
+            </mat-option>
+        }
+
+        </mat-autocomplete>
+    </mat-form-field>
+
+    @if (selectedHero) {
+        <cmp-hero-card [heroe]="selectedHero"
+        />
+    }@else {
+        <p>NotFound</p>
+    }
+</section>
