@@ -1,0 +1,20 @@
+<main class="container">
+  <!-- <div>
+    <h1>{{default}}</h1>
+     <app-componente-hijo [entrada]="title" (emitter)="change($event)"></app-componente-hijo> -->
+  <!-- </div> -->
+  <!-- <router-outlet /> -->
+  <h2>Lista de tareas</h2>
+  <ul>
+    @for (item of listaTareas; track $index) {
+    <li>{{item}}
+      <button type="button" (click)="delete($index)">Eliminar</button>
+    </li>
+    }
+    @empty {
+    <li> NO hay elementos</li>
+    }
+    <input type="text" name="new" id="new" placeholder="nueva tarea" [(ngModel)]="nuevatarea">
+    <button type="button" (click)="add()">Agregar</button>
+  </ul>
+</main>
